@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import api from '../../services/api';
+import { api } from '../../services/api';
 
 import './home.css';
 
@@ -16,9 +16,7 @@ export default function Home() {
       try {
         const { data } = await api.get('/movie/now_playing', {
           params: {
-            api_key: process.env.REACT_APP_API_KEY,
-            language: 'pt-BR',
-            page: page,
+            page: page
           },
         });
 

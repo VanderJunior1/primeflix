@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import api from '../../services/api';
+import { api } from '../../services/api';
 
 import './filme-info.css';
 
@@ -15,12 +15,7 @@ export default function Filme() {
   useEffect(() => {
     const loadFilme = async () => {
       try {
-        const { data } = await api.get(`movie/${id}`, {
-          params: {
-            api_key: process.env.REACT_APP_API_KEY,
-            language: 'pt-BR',
-          },
-        });
+        const { data } = await api.get(`movie/${id}`);
         setFilme(data);
       } catch (err) {
         setError('Não foi possível carregar os detalhes do filme.');
