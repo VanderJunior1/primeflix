@@ -16,9 +16,7 @@ export default function Home() {
       try {
         const { data } = await api.get('/movie/now_playing', {
           params: {
-            api_key: process.env.REACT_APP_API_KEY,
-            language: 'pt-BR',
-            page: page,
+            page: page
           },
         });
 
