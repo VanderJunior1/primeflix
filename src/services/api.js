@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const api = axios.create({
+// instância principal (com interceptors)
+export const api = axios.create({
     baseURL: 'https://api.themoviedb.org/3/'    
 })
 
@@ -15,4 +16,7 @@ api.interceptors.request.use((request) => {
     return Promise.reject(error);
 });
 
-export default api;
+// instância limpa, sem interceptors
+export const cleanApi = axios.create({
+    baseURL: 'https://sua-api.com'
+});
