@@ -57,7 +57,6 @@ export default function Filme() {
     const minha_lista = localStorage.getItem("@primeflix");
     let filmes_salvos = JSON.parse(minha_lista) || [];
 
-    // Renomeei a variável dentro do `some` para evitar conflitos
     const hasFilme = filmes_salvos.some((savedFilme) => savedFilme.id === filme.id);
     
     if (!hasFilme) {
