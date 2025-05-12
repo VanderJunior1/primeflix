@@ -1,0 +1,84 @@
+.filme-info {
+    margin: 0 auto;
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    padding: 0 8px;
+    text-align: center;
+}
+
+.filme-info h1 {
+    margin: 14px 0;
+}
+
+.filme-info h3 {
+    margin-top: 14px;
+    font-size: 1.2rem;
+    /* Melhor definido aqui para manter a consistência */
+}
+
+.filme-info img {
+    border-radius: 8px;
+    width: 800px;
+    max-width: 100%;
+    max-height: 340px;
+    object-fit: cover;
+    margin: 20px 0;
+    /* Uniformizou o margin da imagem */
+}
+
+.filme-info span {
+    margin: 14px 0;
+    font-size: 1rem;
+    color: #333;
+    display: block;
+}
+
+.filme-info strong {
+    font-size: 1.1rem;
+    margin-top: 20px;
+}
+
+.loading,
+.error {
+    color: #ff5733;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+@media (max-width: 600px) {
+    .filme-info img {
+        width: 100%;
+        max-height: none;
+        /* Remove o limite de altura para telas menores */
+    }
+}
+
+.area-buttons button {
+    margin-right: 12px;
+    margin-top: 14px;
+    margin-left: 0;
+    font-size: 20px;
+    border: 0;
+    outline: none;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.5s;
+  }
+  
+  .area-buttons button:hover{
+    background-color: brown;
+    color: #FFF;
+  }
+  
+  .area-buttons a{
+    text-decoration: none;
+    color:#000;
+    transition: all 0.5s;
+  }
+  
+  .area-buttons a:hover{
+    color: #FFF;
+  }
